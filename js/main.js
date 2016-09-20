@@ -11,6 +11,8 @@ window.addEventListener("load", function() {
         agregarMensaje(texto);
         textArea.value = "";
         contador.innerHTML = 140;
+        contador.classList.remove("colorUno");
+        contador.classList.remove("colorDos");
         boton.disabled = true;
     });
 
@@ -25,17 +27,26 @@ window.addEventListener("load", function() {
         boton.disabled = false;
         var longitud = textArea.value.length;
 
-        if(longitud <= caracteres) {
+        contarCaracteres(longitud);
+        cambioColor(longitud); 
+    });
+
+    function contarCaracteres(longitud) {
+         if(longitud <= caracteres) {
             contador.innerHTML = caracteres - longitud;
         } else {
             contador.innerHTML = caracteres - longitud;
         }
-
         if(longitud == 0) {
             boton.disabled = true;
         }
+         if(longitud > caracteres) {
+            boton.disabled = true;
+        }
+    }
 
-        if(longitud > 120) {
+    function cambioColor(longitud) {
+         if(longitud > 120) {
             contador.classList.add("colorUno");
         }
 
@@ -50,10 +61,6 @@ window.addEventListener("load", function() {
         if(longitud < 130) {
             contador.classList.remove("colorDos");
         }
-
-        if(longitud > caracteres) {
-            boton.disabled = true;
-        }
-    });
+    }
   
 });
