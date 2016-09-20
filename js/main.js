@@ -31,6 +31,15 @@ window.addEventListener("load", function() {
         if(longitud == 0) {
             boton.disabled = true;
         }
+        if(longitud > caracteresPermitidos) {
+            boton.disabled = true;
+        }
+        if(longitud > 120) {
+            document.getElementById("contador").classList.add("colorUno");
+        }
+        if(longitud > 130) {
+            document.getElementById("contador").classList.add("colorDos");
+        }
     });
   
 });

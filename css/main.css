@@ -54,6 +54,12 @@ form {
 	margin-left: 500px;
 }
 
-.color {
-	color: #4FFAC0;
+.colorUno {
+	color: #D52CF3;
+	font-weight: bold;
+}
+
+.colorDos {
+	color: #70AF73;
+	font-weight: bold;
 }
