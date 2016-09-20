@@ -16,20 +16,29 @@ window.addEventListener("load", function() {
         boton.disabled = true;
     });
 
+    textArea.addEventListener("keydown", function() {
+        boton.disabled = false;
+        var longitud = textArea.value.length;
+
+        contarCaracteres(longitud);
+        cambioColor(longitud);
+
+    });
+
+    textArea.addEventListener("keyup", function(e) {
+        
+        if(e.keyCode == 13) {
+           var row = this.getAttribute("rows");
+           this.setAttribute("rows", parseInt(row) + 1);
+        }
+    });
+
     function agregarMensaje(texto) {
         var publicacion = document.createElement("div");
         publicacion.innerText = texto;
         var contenedor = document.getElementById("contenedor");
         contenedor.insertBefore(publicacion, contenedor.childNodes[0]).classList.add("box");
     }
-
-    textArea.addEventListener("keydown", function() {
-        boton.disabled = false;
-        var longitud = textArea.value.length;
-
-        contarCaracteres(longitud);
-        cambioColor(longitud); 
-    });
 
     function contarCaracteres(longitud) {
          if(longitud <= caracteres) {
@@ -62,5 +71,6 @@ window.addEventListener("load", function() {
             contador.classList.remove("colorDos");
         }
     }
-  
 });
+
+
