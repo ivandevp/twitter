@@ -82,7 +82,7 @@ window.addEventListener("load", function() {
         var hora = fecha.getHours();
         var minuto = fecha.getMinutes();
             if(minuto < 10) {
-                minuto = "0" + minuto;
+                minuto = "0" + minuto;            
             }
         var horaImprimible = hora + " : " + minuto;
 

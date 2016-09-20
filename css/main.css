@@ -4,26 +4,25 @@
 }
 
 body {
-	background-image: url("../img/fondo.jpg");
+	background-image: url("../img/purple-beach.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
 form {
+	text-align: center;
 	margin-top: 50px;
 }
 
 #texto {
 	padding: 20px;
-	margin-left: 220px;
 	font-size: 18px;
 	overflow:hidden;
-	display:block;
 }
 
 #boton {
-	margin-left: 370px;
 	margin-top: 15px;
+	margin-bottom: 15px;
 	border: none;
 	text-decoration: none;
 	font-size: 18px;
@@ -32,8 +31,7 @@ form {
 }
 
 #contenedor {
-	margin-top: 30px;
-	margin-left: 230px;
+	margin: 0 auto;
 	width: 300px;
 }
 
@@ -54,7 +52,6 @@ form {
 	width: 35px;
 	height: 30px;
 	margin-top:5px;
-	margin-left: 490px;
 }
 
 .colorUno {
@@ -69,6 +66,5 @@ form {
 
 .horaBox {
 	color: #563B7F;
-	margin-left: 230px;
 	margin-bottom: 8px;
 }
