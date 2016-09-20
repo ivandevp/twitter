@@ -16,22 +16,40 @@ form {
 #texto {
 	padding: 25px;
 	margin-left: 200px;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 #boton {
-	margin-left: 430px;
-	margin-top: 30px;
+	margin-left: 390px;
+	margin-top: 10px;
 	border: none;
 	text-decoration: none;
-	font-size: 20px;
+	font-size: 18px;
 	width: 150px;
 	height: 50px;
 }
 
 #contenedor {
 	margin-top: 30px;
-	margin-left: 250px;
-	width: 180px;
-	font-size: 20px;
+	margin-left: 230px;
+	width: 300px;
+}
+
+.box {
+	background-color: #322E2E;
+	width: auto;
+	padding: 15px;
+	font-size: 17px;
+	color: #FFF;
+	margin-bottom: 5px;
+	border-radius: 5px;
+}
+
+#contador {
+	padding: 5px;
+	border: 1px solid #000;
+	width: 35px;
+	height: 30px;
+	margin-top: 10px;
+	margin-left: 500px;
 }
