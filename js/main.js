@@ -9,6 +9,7 @@ window.addEventListener("load", function() {
         var texto = textArea.value;
         agregarMensaje(texto);
         textArea.value = "";
+        document.getElementById("contador").value = 140;
         boton.disabled = true;
     });
 
