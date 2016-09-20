@@ -14,6 +14,7 @@ window.addEventListener("load", function() {
         contador.classList.remove("colorUno");
         contador.classList.remove("colorDos");
         resize();
+        mostrarHora()
         boton.disabled = true;
     });
 
@@ -74,5 +75,20 @@ window.addEventListener("load", function() {
 
     function resize() {
         textArea.style.cssText = "height: auto";
+    }
+
+    function mostrarHora() {
+        var fecha = new Date();
+        var hora = fecha.getHours();
+        var minuto = fecha.getMinutes();
+            if(minuto < 10) {
+                minuto = "0" + minuto;
+            }
+        var horaImprimible = hora + " : " + minuto;
+
+        var horario = document.createElement("div");
+        horario.innerText = horaImprimible;
+        var contenedor = document.getElementById("contenedor");
+        contenedor.insertBefore(horario, contenedor.childNodes[1]).classList.add("horaBox");
     }
 });
