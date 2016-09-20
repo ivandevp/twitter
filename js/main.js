@@ -25,8 +25,12 @@ window.addEventListener("load", function() {
         var longitud = document.getElementById("texto").value.length;
         if(longitud <= caracteresPermitidos) {
             document.getElementById("contador").value = caracteresPermitidos - longitud;
+        } else {
+            document.getElementById("contador").value = caracteresPermitidos - longitud;
         }
-
+        if(longitud == 0) {
+            boton.disabled = true;
+        }
     });
   
 });
