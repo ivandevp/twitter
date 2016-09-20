@@ -1,15 +1,16 @@
 window.addEventListener("load", function() {
 
     var boton = document.getElementById("boton");
-    boton.disabled = true;
+    var textArea = document.getElementById("texto");
+    var contador = document.getElementById("contador");
+    var caracteres = contador.innerHTML = 140;
     
     boton.addEventListener("click", function(e) {
         e.preventDefault();
-        var textArea = document.getElementById("texto");
         var texto = textArea.value;
         agregarMensaje(texto);
         textArea.value = "";
-        document.getElementById("contador").value = 140;
+        contador.innerHTML = 140;
         boton.disabled = true;
     });
 
@@ -20,26 +21,38 @@ window.addEventListener("load", function() {
         contenedor.insertBefore(publicacion, contenedor.childNodes[0]).classList.add("box");
     }
 
-    texto.addEventListener("keydown", function() {
+    textArea.addEventListener("keydown", function() {
         boton.disabled = false;
-        var caracteresPermitidos = 140;
-        var longitud = document.getElementById("texto").value.length;
-        if(longitud <= caracteresPermitidos) {
-            document.getElementById("contador").value = caracteresPermitidos - longitud;
+        var longitud = textArea.value.length;
+
+        if(longitud <= caracteres) {
+            contador.innerHTML = caracteres - longitud;
         } else {
-            document.getElementById("contador").value = caracteresPermitidos - longitud;
+            contador.innerHTML = caracteres - longitud;
         }
+
         if(longitud == 0) {
             boton.disabled = true;
         }
-        if(longitud > caracteresPermitidos) {
-            boton.disabled = true;
-        }
+
         if(longitud > 120) {
-            document.getElementById("contador").classList.add("colorUno");
+            contador.classList.add("colorUno");
         }
+
         if(longitud > 130) {
-            document.getElementById("contador").classList.add("colorDos");
+            contador.classList.add("colorDos");
+        }
+
+        if(longitud < 120) {
+            contador.classList.remove("colorUno");
+        }
+
+        if(longitud < 130) {
+            contador.classList.remove("colorDos");
+        }
+
+        if(longitud > caracteres) {
+            boton.disabled = true;
         }
     });
   

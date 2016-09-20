@@ -48,7 +48,8 @@ form {
 #contador {
 	padding: 5px;
 	border: 1px solid #000;
-	width: 35px;
+	display: inline-block;
+	width: 30px;
 	height: 30px;
 	margin-top: 10px;
 	margin-left: 500px;
