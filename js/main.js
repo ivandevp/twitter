@@ -13,25 +13,19 @@ window.addEventListener("load", function() {
         contador.innerHTML = 140;
         contador.classList.remove("colorUno");
         contador.classList.remove("colorDos");
+        resize();
         boton.disabled = true;
     });
 
-    textArea.addEventListener("keydown", function() {
+    textArea.addEventListener("keyup", function(e) {
         boton.disabled = false;
         var longitud = textArea.value.length;
 
         contarCaracteres(longitud);
         cambioColor(longitud);
-
     });
 
-    textArea.addEventListener("keyup", function(e) {
-        
-        if(e.keyCode == 13) {
-           var row = this.getAttribute("rows");
-           this.setAttribute("rows", parseInt(row) + 1);
-        }
-    });
+    textArea.addEventListener("keydown", growing);
 
     function agregarMensaje(texto) {
         var publicacion = document.createElement("div");
@@ -61,6 +55,7 @@ window.addEventListener("load", function() {
 
         if(longitud > 130) {
             contador.classList.add("colorDos");
+            contador.classList.remove("colorUno");
         }
 
         if(longitud < 120) {
@@ -71,6 +66,13 @@ window.addEventListener("load", function() {
             contador.classList.remove("colorDos");
         }
     }
+
+    function growing() {
+        textArea.style.cssText = "height: auto";
+        textArea.style.cssText = "height: " + textArea.scrollHeight + "px";
+    }
+
+    function resize() {
+        textArea.style.cssText = "height: auto";
+    }
 });
-
-
