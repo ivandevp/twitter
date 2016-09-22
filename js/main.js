@@ -8,13 +8,13 @@ window.addEventListener("load", function() {
     boton.addEventListener("click", function(e) {
         e.preventDefault();
         var texto = textArea.value;
+        mostrarHora();
         agregarMensaje(texto);
         textArea.value = "";
         contador.innerHTML = 140;
         contador.classList.remove("colorUno");
         contador.classList.remove("colorDos");
         resize();
-        mostrarHora()
         boton.disabled = true;
     });
 
@@ -32,7 +32,7 @@ window.addEventListener("load", function() {
         var publicacion = document.createElement("div");
         publicacion.innerText = texto;
         var contenedor = document.getElementById("contenedor");
-        contenedor.insertBefore(publicacion, contenedor.childNodes[0]).classList.add("box");
+        contenedor.insertBefore(publicacion, contenedor.childNodes[1]).classList.add("box");
     }
 
     function contarCaracteres(longitud) {
@@ -89,6 +89,6 @@ window.addEventListener("load", function() {
         var horario = document.createElement("div");
         horario.innerText = horaImprimible;
         var contenedor = document.getElementById("contenedor");
-        contenedor.insertBefore(horario, contenedor.childNodes[1]).classList.add("horaBox");
+        contenedor.insertBefore(horario, contenedor.childNodes[0]).classList.add("horaBox");
     }
 });
