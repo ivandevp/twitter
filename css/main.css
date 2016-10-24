@@ -3,53 +3,54 @@
 	font-family: "Lobster Two";
 }
 
-body {
-	background-image: url("../img/purple-beach.jpg");
+.section {
+	height: 100vh;
+	background-image: url("../img/fondo.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	padding: 20px 80px;
+	background-position: center;
 	position: relative;
+	width: 100%;
+	text-align: center;
 }
 
 h1 {
+	text-align: center;
 	font-size: 40px;
+	margin-top: 0;
+	color: #4F4D4E;
 }
 
-form {
+.form {
 	text-align: center;
 	background-color: rgba(64, 48, 42, 0.6);
-	padding: 20px;
 	border-radius: 5px;
-	width: 41%;
+	width: 100%;
+	padding-top: 1.5em;
 	margin-bottom: 10px;
-	position: absolute;
-	left: 25%;
 }
 
 #texto {
-	width: 58%;
+	width: 90%;
 	padding: 20px;
-	font-size: 18px;
-	overflow:hidden;
+	font-size: 0.8em;
+	overflow: hidden;
 	border-radius: 5px;
 }
 
 #boton {
-	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-top: 8px;
+	margin-bottom: 12px;
 	border: none;
 	text-decoration: none;
 	font-size: 100%;
 	width: 30%;
-	height: 50px;
+	height: 40px;
 	border-radius: 5px;
 }
 
-#contenedor {
-	position: absolute;
-	top: 261%;
-	left: 35%;
-	width: 24%;
+ #contenedor {
+	width: 100%;
 }
 
 .box {
@@ -64,7 +65,7 @@ form {
 
 #contador {
 	padding: 5px;
-	border: 1px solid #000;
+	border: 1px solid #CBEAE5;
 	display: inline-block;
 	width: 35px;
 	height: 30px;
@@ -82,7 +83,7 @@ form {
 }
 
 .horaBox {
-	color: #563B7F;
+	color: #4F4D4E;
 	font-weight: bold;
 	margin-bottom: 8px;
-}
+} 
