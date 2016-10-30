@@ -51,7 +51,8 @@ h1 {
 }
 
  #contenedor {
-	width: 100%;
+	width: 80%;
+	margin: 0 auto;
 }
 
 .box {
